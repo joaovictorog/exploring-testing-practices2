@@ -46,16 +46,29 @@ Para cada repositório, escolha uma prática ou dado de teste relevante e expliq
 
 ### Repositório 1 
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: https://github.com/pallets/flask
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: https://andrehora.github.io/testminer/#pallets/flask
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação: O Flask mantém os testes bem separados do código-fonte. Na análise do
+TestMiner, o projeto possui 36 arquivos de teste e 35 arquivos auxiliares de teste.
+Grande parte desses arquivos auxiliares está em diretórios como tests/static,
+tests/templates e tests/test_apps, que contêm configurações, páginas, modelos e
+pequenas aplicações usadas durante os testes. Essa organização permite simular
+situações reais sem misturar os dados e recursos de teste com a implementação da
+biblioteca. Além disso, o arquivo .github/workflows/tests.yaml mostra que a suíte
+é executada automaticamente na integração contínua.
 
 ### Repositório 2
 
-Repositório: `<URL_DO_REPOSITÓRIO>`
+Repositório: https://github.com/psf/requests
 
-URL TestMiner: `<URL_NO_TESTMINER>`
+URL TestMiner: https://andrehora.github.io/testminer/#psf/requests
 
-Explicação: `<SUA_EXPLICAÇÃO>`
+Explicação: O Requests possui 10 arquivos de teste e 12 arquivos auxiliares de
+teste identificados pelo TestMiner. Um aspecto relevante é a infraestrutura criada
+para testar conexões seguras: o diretório tests/certs reúne certificados válidos,
+expirados e de autenticação mútua. Assim, o projeto consegue verificar diferentes
+cenários de TLS usando recursos controlados e reproduzíveis. O workflow
+.github/workflows/run-tests.yml, também reconhecido pela ferramenta, automatiza a
+execução desses testes no ambiente de integração contínua.
